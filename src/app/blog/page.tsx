@@ -144,7 +144,7 @@ export default function BlogPage() {
               placeholder="Enter your email"
               className="flex-1 rounded-md border border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
-            <Button size="lg">Subscribe</Button>
+            <Button size="lg" href="/login">Subscribe</Button>
           </div>
         </div>
       </section>

@@ -32,6 +32,7 @@ export const NAVIGATION = [
   { label: 'Solutions', href: ROUTES.solutions },
   { label: 'Portfolio', href: ROUTES.portfolio },
   { label: 'Careers', href: ROUTES.careers },
+  { label: 'Resources', href: ROUTES.resources },
   { label: 'Contact', href: ROUTES.contact }
 ];
 
