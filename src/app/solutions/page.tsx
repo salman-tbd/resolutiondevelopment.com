@@ -2,11 +2,13 @@ import { generateMetadata, generateBreadcrumbStructuredData } from '@/utils/seo'
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import { COMPANY } from '@/utils/constants';
+import Link from 'next/link';
 
 export const metadata = generateMetadata({
   title: 'Solutions',
   description: `Comprehensive technology solutions from ${COMPANY.brandName}. Enterprise software, digital transformation, and custom solutions tailored to your business needs.`,
   path: '/solutions',
+  image: '/assets/images/technology-technical-assistance-repair-conceopt (1).jpg',
   keywords: [
     'technology solutions',
     'enterprise software solutions',
@@ -110,7 +112,9 @@ export default function SolutionsPage() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold sm:text-6xl lg:text-7xl mb-6 drop-shadow-lg">Technology Solutions</h1>
             <p className="text-xl sm:text-2xl text-blue-50 leading-relaxed drop-shadow-md">
-              Comprehensive solutions designed to address your specific business challenges and drive innovation.
+              Comprehensive solutions designed to address your specific business challenges and drive innovation. 
+              Browse our <Link href="/services" className="underline hover:text-white">full range of services</Link> or 
+              <a href="/portfolio" className="underline hover:text-white"> view our portfolio</a> to see our work in action.
             </p>
           </div>
         </div>

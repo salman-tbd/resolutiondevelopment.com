@@ -1,4 +1,14 @@
-export const serviceDetails = [
+export type Service = {
+  title: string;
+  slug: string;
+  description: string;
+  longDescription: string;
+  features: string[];
+  icon: string;
+  gradient: string;
+};
+
+export const serviceDetails: Service[] = [
   {
     title: 'Custom Software Development',
     slug: 'custom-software-development',
@@ -179,5 +189,5 @@ export const serviceDetails = [
     icon: 'M13 10V3L4 14h7v7l9-11h-7z',
     gradient: 'from-amber-500 via-yellow-600 to-orange-500',
   },
-] as const;
+];
 

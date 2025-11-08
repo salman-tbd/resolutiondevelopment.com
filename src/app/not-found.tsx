@@ -1,6 +1,15 @@
 import Link from 'next/link';
 import { ROUTES } from '@/utils/constants';
 import { FaHome, FaBriefcase, FaInfoCircle, FaEnvelope, FaPalette, FaTools } from 'react-icons/fa';
+import { generateMetadata } from '@/utils/seo';
+import { COMPANY } from '@/utils/constants';
+
+export const metadata = generateMetadata({
+  title: '404 - Page Not Found',
+  description: `The page you're looking for doesn't exist. Return to ${COMPANY.brandName} homepage or explore our services, portfolio, and solutions.`,
+  path: '/404',
+  noindex: true,
+});
 
 export default function NotFound() {
   const popularPages = [

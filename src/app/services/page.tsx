@@ -6,6 +6,7 @@ export const metadata = generateMetadata({
   title: 'Our Services',
   description: `Comprehensive IT services from ${COMPANY.brandName}: Custom software development, web applications, mobile apps, cloud solutions, and IT consulting.`,
   path: '/services',
+  image: '/assets/images/technology-technical-assistance-repair-conceopt (1).jpg',
   keywords: [
     'IT services',
     'software development services',
@@ -239,7 +240,8 @@ export default function ServicesPage() {
             <h1 className="text-5xl font-bold sm:text-6xl lg:text-7xl mb-6 drop-shadow-lg">Our Services</h1>
             <p className="text-xl sm:text-2xl text-blue-50 leading-relaxed drop-shadow-md">
               Comprehensive IT solutions tailored to your business needs. From custom software 
-              to cloud infrastructure, we&apos;ve got you covered.
+              to cloud infrastructure, we&apos;ve got you covered. Learn more about our <a href="/solutions" className="underline hover:text-white">technology solutions</a> and 
+              <a href="/process" className="underline hover:text-white"> development process</a>.
             </p>
           </div>
         </div>

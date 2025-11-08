@@ -88,7 +88,7 @@ export default function BlogPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-16" role="banner">
+      <section className="bg-gradient-to-br from-blue-400 via-blue-500 to-cyan-500 text-white py-16" role="banner">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold sm:text-5xl mb-4">Blog & Insights</h1>
           <p className="text-xl text-blue-100 max-w-3xl">

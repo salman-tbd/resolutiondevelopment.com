@@ -14,8 +14,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = generateBaseMetadata({
-  title: undefined,
-  description: undefined,
+  title: `${COMPANY.brandName} - ${COMPANY.description}`,
+  description: COMPANY.description,
 });
 
 export default function RootLayout({

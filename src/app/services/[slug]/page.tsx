@@ -39,10 +39,15 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
   const serviceSchema = generateServiceStructuredData({
     name: service.title,
-    description: service.description,
+    description: service.longDescription || service.description,
     url: `https://${COMPANY.domain}/services/${slug}`,
+    image: `https://${COMPANY.domain}/assets/logo/RDLogo-02.png`,
     serviceType: service.title,
     areaServed: COMPANY.targetCountries,
+    offers: {
+      availability: 'https://schema.org/InStock',
+      priceCurrency: 'USD',
+    },
   });
 
   const breadcrumbSchema = generateBreadcrumbStructuredData([

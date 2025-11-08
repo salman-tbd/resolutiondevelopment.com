@@ -7,6 +7,7 @@ export const metadata = generateMetadata({
   title: 'Contact Us',
   description: `Get in touch with ${COMPANY.brandName}. Reach out for inquiries, quotes, or support. We're here to help with your IT needs.`,
   path: '/contact',
+  image: '/assets/images/technology-technical-assistance-repair-conceopt (1).jpg',
   keywords: [
     'contact us',
     'IT consulting contact',

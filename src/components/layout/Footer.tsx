@@ -40,13 +40,31 @@ export default function Footer() {
 
             {/* Social Media */}
             <div className="flex items-center space-x-3">
-              <a href="#" className="w-10 h-10 rounded-full bg-[#252833] flex items-center justify-center hover:bg-[#2d3142] transition-colors">
+              <a 
+                href={COMPANY.socialMedia?.facebook || `https://www.facebook.com/${COMPANY.brandName.replace(/\s+/g, '')}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Follow us on Facebook"
+                className="w-10 h-10 rounded-full bg-[#252833] flex items-center justify-center hover:bg-[#2d3142] transition-colors"
+              >
                 <FaFacebook className="text-white" size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#252833] flex items-center justify-center hover:bg-[#2d3142] transition-colors">
+              <a 
+                href={COMPANY.socialMedia?.twitter || `https://twitter.com/${COMPANY.brandName.replace(/\s+/g, '')}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Follow us on Twitter"
+                className="w-10 h-10 rounded-full bg-[#252833] flex items-center justify-center hover:bg-[#2d3142] transition-colors"
+              >
                 <FaTwitter className="text-white" size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#252833] flex items-center justify-center hover:bg-[#2d3142] transition-colors">
+              <a 
+                href={COMPANY.socialMedia?.instagram || `https://www.instagram.com/${COMPANY.brandName.toLowerCase().replace(/\s+/g, '')}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Follow us on Instagram"
+                className="w-10 h-10 rounded-full bg-[#252833] flex items-center justify-center hover:bg-[#2d3142] transition-colors"
+              >
                 <FaInstagram className="text-white" size={18} />
               </a>
             </div>

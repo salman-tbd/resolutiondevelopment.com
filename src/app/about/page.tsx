@@ -1,11 +1,13 @@
 import { generateMetadata, generateBreadcrumbStructuredData } from '@/utils/seo';
 import Card from '@/components/ui/Card';
 import { COMPANY } from '@/utils/constants';
+import Link from 'next/link';
 
 export const metadata = generateMetadata({
   title: 'About Us',
   description: `Learn about ${COMPANY.brandName} - Our history, mission, values, and commitment to delivering exceptional IT solutions since ${COMPANY.establishedYear}.`,
   path: '/about',
+  image: '/assets/images/technology-technical-assistance-repair-conceopt (1).jpg',
   keywords: [
     'about us',
     'IT company',
@@ -91,11 +93,12 @@ export default function AboutPage() {
                 <p>
                   Over the years, we&apos;ve completed hundreds of projects, from small business websites to 
                   enterprise-scale applications. Our commitment to quality, innovation, and client success 
-                  has earned us a reputation as a reliable technology partner.
+                  has earned us a reputation as a reliable technology partner. Explore our <a href="/portfolio" className="text-blue-600 hover:underline font-semibold">portfolio</a> to see some of our recent work.
                 </p>
                 <p>
                   Today, we continue to evolve with the technology landscape, adopting new tools, 
-                  methodologies, and best practices to deliver solutions that drive real business value.
+                  methodologies, and best practices to deliver solutions that drive real business value. 
+                  Learn more about our <Link href="/services" className="text-blue-600 hover:underline font-semibold">services</Link> and <a href="/process" className="text-blue-600 hover:underline font-semibold">development process</a>.
                 </p>
               </div>
             </div>

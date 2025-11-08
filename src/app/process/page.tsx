@@ -1,6 +1,14 @@
 import { generateMetadata } from '@/utils/seo';
 import Card from '@/components/ui/Card';
 import { COMPANY } from '@/utils/constants';
+import { 
+  FaClipboardList, 
+  FaDraftingCompass, 
+  FaLaptopCode, 
+  FaShieldAlt, 
+  FaRocket, 
+  FaCog 
+} from 'react-icons/fa';
 
 export const metadata = generateMetadata({
   title: 'Our Process',
@@ -29,7 +37,8 @@ const processSteps = [
       'Technical feasibility analysis',
       'Project roadmap creation',
     ],
-    icon: '🔍',
+    icon: FaClipboardList,
+    gradient: 'from-blue-500 to-cyan-500',
   },
   {
     step: 2,
@@ -41,7 +50,8 @@ const processSteps = [
       'Database schema design',
       'API specification',
     ],
-    icon: '🎨',
+    icon: FaDraftingCompass,
+    gradient: 'from-purple-500 to-pink-500',
   },
   {
     step: 3,
@@ -53,7 +63,8 @@ const processSteps = [
       'Code reviews',
       'Regular demos',
     ],
-    icon: '💻',
+    icon: FaLaptopCode,
+    gradient: 'from-green-500 to-emerald-500',
   },
   {
     step: 4,
@@ -65,7 +76,8 @@ const processSteps = [
       'Security testing',
       'Performance testing',
     ],
-    icon: '✅',
+    icon: FaShieldAlt,
+    gradient: 'from-orange-500 to-amber-500',
   },
   {
     step: 5,
@@ -77,7 +89,8 @@ const processSteps = [
       'Data migration',
       'Go-live support',
     ],
-    icon: '🚀',
+    icon: FaRocket,
+    gradient: 'from-indigo-500 to-blue-500',
   },
   {
     step: 6,
@@ -89,14 +102,15 @@ const processSteps = [
       'Performance optimization',
       'Feature enhancements',
     ],
-    icon: '🔧',
+    icon: FaCog,
+    gradient: 'from-teal-500 to-cyan-500',
   },
 ];
 
 export default function ProcessPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-br from-blue-400 via-blue-500 to-cyan-500 text-white py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold sm:text-5xl mb-4">Our Development Process</h1>
           <p className="text-xl text-blue-100 max-w-3xl">
@@ -118,7 +132,12 @@ export default function ProcessPage() {
                   </div>
                   <Card className="flex-1">
                     <div className="flex items-start mb-4">
-                      <span className="text-4xl mr-4">{process.icon}</span>
+                      <div className={`flex-shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br ${process.gradient} flex items-center justify-center mr-4 shadow-lg`}>
+                        {(() => {
+                          const IconComponent = process.icon;
+                          return <IconComponent className="text-2xl text-white" />;
+                        })()}
+                      </div>
                       <div className="flex-1">
                         <h2 className="text-2xl font-bold text-gray-900 mb-2">{process.title}</h2>
                         <p className="text-gray-600 mb-4">{process.description}</p>

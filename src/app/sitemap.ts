@@ -8,6 +8,7 @@ export const dynamic = 'force-static';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = `https://${COMPANY.domain}`;
   const currentDate = new Date().toISOString();
+  // Use more recent dates for better SEO - pages are actively maintained
   const lastWeek = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
   const lastMonth = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
   const lastYear = new Date(Date.now() - 365 * 24 * 60 * 60 * 1000).toISOString();

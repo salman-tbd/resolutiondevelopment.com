@@ -6,7 +6,12 @@ interface ExtendedCompany {
   twitterHandle?: string;
   twitterSiteId?: string;
   phone?: string;
-  socialMedia?: string[];
+  socialMedia?: string[] | {
+    facebook?: string;
+    twitter?: string;
+    instagram?: string;
+    linkedin?: string;
+  };
   address?: {
     '@type'?: string;
     [key: string]: unknown;
@@ -29,6 +34,28 @@ function optimizeDescription(description: string): string {
   const maxLength = 160;
   if (description.length <= maxLength) return description;
   return description.substring(0, maxLength - 3).trim() + '...';
+}
+
+// Helper function to convert socialMedia object/array to array format for sameAs
+function getSocialMediaUrls(): string[] {
+  const socialMedia = (COMPANY as ExtendedCompany).socialMedia;
+  if (Array.isArray(socialMedia)) {
+    return socialMedia;
+  }
+  if (socialMedia && typeof socialMedia === 'object') {
+    return [
+      socialMedia.facebook,
+      socialMedia.twitter,
+      socialMedia.linkedin,
+      socialMedia.instagram,
+    ].filter(Boolean) as string[];
+  }
+  return [
+    `https://www.facebook.com/${COMPANY.brandName.replace(/\s+/g, '')}`,
+    `https://twitter.com/${COMPANY.brandName.replace(/\s+/g, '')}`,
+    `https://www.linkedin.com/company/${COMPANY.brandName.toLowerCase().replace(/\s+/g, '-')}`,
+    `https://www.instagram.com/${COMPANY.brandName.toLowerCase().replace(/\s+/g, '')}`,
+  ];
 }
 
 export function generateMetadata({
@@ -161,15 +188,40 @@ export function generateMetadata({
       'max-video-preview': -1,
     },
     verification: {
-      // Add verification codes here when available
-      // google: 'your-google-verification-code',
-      // yandex: 'your-yandex-verification-code',
-      // yahoo: 'your-yahoo-verification-code',
-      // bing: 'your-bing-verification-code',
-      // other: {
-      //   'msvalidate.01': 'your-bing-verification-code',
-      //   'facebook-domain-verification': 'your-facebook-verification-code',
-      // },
+      // Add search engine verification codes via environment variables
+      // Get these from:
+      // - Google Search Console: https://search.google.com/search-console
+      // - Bing Webmaster Tools: https://www.bing.com/webmasters
+      // - Yandex Webmaster: https://webmaster.yandex.com
+      // - Facebook Business: https://business.facebook.com
+      // 
+      // Set these in your .env.local file:
+      // NEXT_PUBLIC_GOOGLE_VERIFICATION=abc123xyz789
+      // NEXT_PUBLIC_BING_VERIFICATION=DEF456UVW012
+      // NEXT_PUBLIC_YANDEX_VERIFICATION=ghi789rst345
+      // NEXT_PUBLIC_FACEBOOK_VERIFICATION=pqr345stu901
+      ...(process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION && {
+        google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+      }),
+      ...(process.env.NEXT_PUBLIC_BING_VERIFICATION && {
+        bing: process.env.NEXT_PUBLIC_BING_VERIFICATION,
+      }),
+      ...(process.env.NEXT_PUBLIC_YANDEX_VERIFICATION && {
+        yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
+      }),
+      ...(process.env.NEXT_PUBLIC_YAHOO_VERIFICATION && {
+        yahoo: process.env.NEXT_PUBLIC_YAHOO_VERIFICATION,
+      }),
+      ...((process.env.NEXT_PUBLIC_BING_VERIFICATION || process.env.NEXT_PUBLIC_FACEBOOK_VERIFICATION) && {
+        other: {
+          ...(process.env.NEXT_PUBLIC_BING_VERIFICATION && {
+            'msvalidate.01': process.env.NEXT_PUBLIC_BING_VERIFICATION,
+          }),
+          ...(process.env.NEXT_PUBLIC_FACEBOOK_VERIFICATION && {
+            'facebook-domain-verification': process.env.NEXT_PUBLIC_FACEBOOK_VERIFICATION,
+          }),
+        },
+      }),
     },
     other: {
       'geo.region': COMPANY.targetCountries[0] || 'US',
@@ -272,12 +324,7 @@ export function generateStructuredData(type: 'Organization' | 'WebSite' | 'Bread
           availableLanguage: ['en', 'en-US'],
         },
       ],
-      sameAs: (COMPANY as ExtendedCompany).socialMedia || [
-        `https://www.facebook.com/${COMPANY.brandName.replace(/\s+/g, '')}`,
-        `https://twitter.com/${COMPANY.brandName.replace(/\s+/g, '')}`,
-        `https://www.linkedin.com/company/${COMPANY.brandName.toLowerCase().replace(/\s+/g, '-')}`,
-        `https://www.instagram.com/${COMPANY.brandName.toLowerCase().replace(/\s+/g, '')}`,
-      ],
+      sameAs: getSocialMediaUrls(),
       address: (COMPANY as ExtendedCompany).address ? (typeof (COMPANY as ExtendedCompany).address === 'object' && (COMPANY as ExtendedCompany).address?.['@type'] ? (COMPANY as ExtendedCompany).address : {
         '@type': 'PostalAddress',
         ...(COMPANY as ExtendedCompany).address,
@@ -401,12 +448,7 @@ export function generateStructuredData(type: 'Organization' | 'WebSite' | 'Bread
         bestRating: '5',
         worstRating: '1',
       },
-      sameAs: (COMPANY as ExtendedCompany).socialMedia || [
-        `https://www.facebook.com/${COMPANY.brandName.replace(/\s+/g, '')}`,
-        `https://twitter.com/${COMPANY.brandName.replace(/\s+/g, '')}`,
-        `https://www.linkedin.com/company/${COMPANY.brandName.toLowerCase().replace(/\s+/g, '-')}`,
-        `https://www.instagram.com/${COMPANY.brandName.toLowerCase().replace(/\s+/g, '')}`,
-      ],
+      sameAs: getSocialMediaUrls(),
     };
   }
 

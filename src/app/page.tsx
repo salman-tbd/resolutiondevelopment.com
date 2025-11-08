@@ -4,11 +4,13 @@ import Services from '@/components/sections/Services';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import { COMPANY } from '@/utils/constants';
+import Link from 'next/link';
 
 export const metadata = generateMetadata({
   title: `${COMPANY.brandName} - ${COMPANY.description}`,
   description: `${COMPANY.description} - Leading IT solutions since ${COMPANY.establishedYear}. Custom software development, web applications, mobile apps, cloud solutions, and IT consulting services.`,
   path: '/',
+  image: '/assets/images/technology-technical-assistance-repair-conceopt (1).jpg',
   keywords: [
     'IT solutions',
     'software development company',
@@ -197,7 +199,9 @@ export default function Home() {
               <p className="text-gray-600 mb-8 leading-relaxed">
                 With over {new Date().getFullYear() - parseInt(COMPANY.establishedYear)} years of experience in the IT industry, 
                 we&apos;ve helped hundreds of businesses transform their digital presence and streamline their operations 
-                through innovative technology solutions. Our commitment to excellence and client success drives everything we do.
+                through innovative technology solutions. Our commitment to excellence and client success drives everything we do. 
+                Explore our <Link href="/services" className="text-blue-600 hover:underline font-semibold">comprehensive services</Link> and{' '}
+                <a href="/solutions" className="text-blue-600 hover:underline font-semibold">technology solutions</a> to see how we can help your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/about" size="lg">
