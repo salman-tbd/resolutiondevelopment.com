@@ -198,7 +198,7 @@ export default function Home() {
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 With over {new Date().getFullYear() - parseInt(COMPANY.establishedYear)} years of experience in the IT industry, 
-                we&apos;ve helped hundreds of businesses transform their digital presence and streamline their operations 
+                we've helped hundreds of businesses transform their digital presence and streamline their operations 
                 through innovative technology solutions. Our commitment to excellence and client success drives everything we do. 
                 Explore our <Link href="/services" className="text-blue-600 hover:underline font-semibold">comprehensive services</Link> and{' '}
                 <a href="/solutions" className="text-blue-600 hover:underline font-semibold">technology solutions</a> to see how we can help your business.
@@ -350,7 +350,7 @@ export default function Home() {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don&apos;t just take our word for it - hear from businesses we&apos;ve helped succeed
+              Don't just take our word for it - hear from businesses we've helped succeed
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -388,7 +388,7 @@ export default function Home() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-              Let&apos;s discuss how our innovative IT solutions can drive growth and digital transformation for your organization.
+              Let's discuss how our innovative IT solutions can drive growth and digital transformation for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">

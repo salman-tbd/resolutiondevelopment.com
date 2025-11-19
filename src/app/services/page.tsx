@@ -240,7 +240,7 @@ export default function ServicesPage() {
             <h1 className="text-5xl font-bold sm:text-6xl lg:text-7xl mb-6 drop-shadow-lg">Our Services</h1>
             <p className="text-xl sm:text-2xl text-blue-50 leading-relaxed drop-shadow-md">
               Comprehensive IT solutions tailored to your business needs. From custom software 
-              to cloud infrastructure, we&apos;ve got you covered. Learn more about our <a href="/solutions" className="underline hover:text-white">technology solutions</a> and 
+              to cloud infrastructure, we've got you covered. Learn more about our <a href="/solutions" className="underline hover:text-white">technology solutions</a> and 
               <a href="/process" className="underline hover:text-white"> development process</a>.
             </p>
           </div>
@@ -299,7 +299,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-6">Need a Custom Solution?</h2>
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Every business is unique. Let&apos;s discuss your specific requirements and create 
+            Every business is unique. Let's discuss your specific requirements and create 
             a tailored solution that fits your needs perfectly.
           </p>
           <Button href="/contact" size="lg">

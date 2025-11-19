@@ -52,7 +52,7 @@ export default function TermsPage() {
                 <div className="flex-1">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">Use License</h2>
                   <p className="text-lg text-gray-700 mb-6">
-                    Permission is granted to temporarily access the materials on {COMPANY.brandName}&apos;s website for personal, 
+                    Permission is granted to temporarily access the materials on {COMPANY.brandName}'s website for personal, 
                     non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
                   </p>
                   <ul className="space-y-3 text-gray-700">
@@ -192,7 +192,7 @@ export default function TermsPage() {
                 <div className="flex-1">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">Disclaimer</h2>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    The materials on {COMPANY.brandName}&apos;s website are provided on an &apos;as is&apos; basis. {COMPANY.brandName} makes no warranties, 
+                    The materials on {COMPANY.brandName}'s website are provided on an 'as is' basis. {COMPANY.brandName} makes no warranties, 
                     expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, 
                     implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of 
                     intellectual property or other violation of rights.
@@ -213,7 +213,7 @@ export default function TermsPage() {
                   <p className="text-lg text-gray-700 leading-relaxed">
                     In no event shall {COMPANY.brandName} or its suppliers be liable for any damages (including, without limitation, 
                     damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use 
-                    the materials on {COMPANY.brandName}&apos;s website, even if {COMPANY.brandName} or an authorized representative has been 
+                    the materials on {COMPANY.brandName}'s website, even if {COMPANY.brandName} or an authorized representative has been 
                     notified orally or in writing of the possibility of such damage.
                   </p>
                 </div>
@@ -230,7 +230,7 @@ export default function TermsPage() {
                 <div className="flex-1">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">Revisions and Errata</h2>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    The materials appearing on {COMPANY.brandName}&apos;s website could include technical, typographical, or photographic errors. 
+                    The materials appearing on {COMPANY.brandName}'s website could include technical, typographical, or photographic errors. 
                     {COMPANY.brandName} does not warrant that any of the materials on its website are accurate, complete, or current. 
                     {COMPANY.brandName} may make changes to the materials contained on its website at any time without notice.
                   </p>
@@ -250,7 +250,7 @@ export default function TermsPage() {
                   <p className="text-lg text-gray-700 leading-relaxed">
                     {COMPANY.brandName} has not reviewed all of the sites linked to its website and is not responsible for the contents 
                     of any such linked site. The inclusion of any link does not imply endorsement by {COMPANY.brandName} of the site. 
-                    Use of any such linked website is at the user&apos;s own risk.
+                    Use of any such linked website is at the user's own risk.
                   </p>
                 </div>
               </div>

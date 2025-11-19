@@ -291,7 +291,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Post Not Found</h1>
-          <p className="text-gray-600 mb-8">The blog post you&apos;re looking for doesn&apos;t exist.</p>
+          <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
           <Button href="/blog">Back to Blog</Button>
         </div>
       </div>

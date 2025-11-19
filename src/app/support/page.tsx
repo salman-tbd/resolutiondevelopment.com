@@ -110,7 +110,7 @@ export default function SupportPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold sm:text-5xl mb-4">Support Center</h1>
           <p className="text-xl text-blue-100 max-w-3xl">
-            We&apos;re here to help. Access resources, get assistance, and find answers to your questions.
+            We're here to help. Access resources, get assistance, and find answers to your questions.
           </p>
         </div>
       </section>

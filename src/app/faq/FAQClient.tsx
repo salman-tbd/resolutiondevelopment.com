@@ -56,7 +56,7 @@ export default function FAQClient() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Still Have Questions?</h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Can&apos;t find what you&apos;re looking for? Our team is here to help. Get in touch and we&apos;ll answer any questions you have.
+            Can't find what you're looking for? Our team is here to help. Get in touch and we'll answer any questions you have.
           </p>
           <a
             href="/contact"

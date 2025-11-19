@@ -40,7 +40,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold sm:text-5xl mb-4">Contact Us</h1>
           <p className="text-xl text-blue-100 max-w-3xl">
-            Have a project in mind? Let&apos;s discuss how we can help bring your vision to life.
+            Have a project in mind? Let's discuss how we can help bring your vision to life.
           </p>
         </div>
       </section>

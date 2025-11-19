@@ -197,10 +197,10 @@ export default function CareersPage() {
 
       <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Don&apos;t See a Fit?</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Don't See a Fit?</h2>
           <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-            We&apos;re always interested in connecting with talented individuals who share our passion for innovation. 
-            Send us your resume and we&apos;ll keep you in mind for future opportunities.
+            We're always interested in connecting with talented individuals who share our passion for innovation. 
+            Send us your resume and we'll keep you in mind for future opportunities.
           </p>
           <Button href="/login" size="lg" variant="primary">
             Send Your Resume

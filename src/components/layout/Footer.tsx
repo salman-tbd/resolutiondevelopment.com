@@ -39,13 +39,13 @@ export default function Footer() {
               <div className="flex items-center bg-[#252833] rounded-lg px-3 py-2.5">
                 <FaPhone className="text-teal-400 mr-3 flex-shrink-0" size={18} />
                 <a href="tel:9998275582" className="text-sm text-gray-300 hover:text-white transition-colors">
-                  9998275582
+                  +91 9998275582
                 </a>
               </div>
               <div className="flex items-start bg-[#252833] rounded-lg px-3 py-2.5">
                 <FaMapMarkerAlt className="text-teal-400 mr-3 flex-shrink-0 mt-0.5" size={18} />
                 <address className="text-sm text-gray-300 not-italic leading-relaxed">
-                  sun gravitas, 837, Rajmani Society, Shyamal, Ahmedabad, Gujarat 380015
+                  837, Sun Gravitas, Rajmani Society, Shyamal, Ahmedabad<br />Gujarat - 380015
                 </address>
               </div>
             </div>

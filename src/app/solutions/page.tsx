@@ -156,7 +156,7 @@ export default function SolutionsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-6">Need a Custom Solution?</h2>
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Every business is unique. Let&apos;s work together to create a solution tailored to your specific needs.
+            Every business is unique. Let's work together to create a solution tailored to your specific needs.
           </p>
           <Button href="/contact" size="lg">
             Discuss Your Requirements

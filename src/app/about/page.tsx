@@ -72,7 +72,7 @@ export default function AboutPage() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold sm:text-6xl lg:text-7xl mb-6 drop-shadow-lg">About {COMPANY.brandName}</h1>
             <p className="text-xl sm:text-2xl text-blue-50 leading-relaxed drop-shadow-md">
-              Established in {COMPANY.establishedYear}, we&apos;ve been at the forefront of IT innovation, 
+              Established in {COMPANY.establishedYear}, we've been at the forefront of IT innovation, 
               helping businesses transform through technology.
             </p>
           </div>
@@ -91,7 +91,7 @@ export default function AboutPage() {
                   of passionate developers has grown into a trusted partner for companies worldwide.
                 </p>
                 <p>
-                  Over the years, we&apos;ve completed hundreds of projects, from small business websites to 
+                  Over the years, we've completed hundreds of projects, from small business websites to 
                   enterprise-scale applications. Our commitment to quality, innovation, and client success 
                   has earned us a reputation as a reliable technology partner. Explore our <a href="/portfolio" className="text-blue-600 hover:underline font-semibold">portfolio</a> to see some of our recent work.
                 </p>
@@ -129,7 +129,7 @@ export default function AboutPage() {
                 </div>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   To be the leading IT solutions provider, recognized for excellence, innovation, 
-                  and transformative impact on our clients&apos; businesses.
+                  and transformative impact on our clients' businesses.
                 </p>
               </Card>
             </div>
@@ -196,7 +196,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold sm:text-5xl mb-6">Ready to Work With Us?</h2>
           <p className="text-xl sm:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Let&apos;s discuss how we can help transform your business with innovative technology solutions.
+            Let's discuss how we can help transform your business with innovative technology solutions.
           </p>
           <a
             href="/contact"

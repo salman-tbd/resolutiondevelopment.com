@@ -30,7 +30,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Service Not Found</h1>
-          <p className="text-gray-600 mb-8">The service you&apos;re looking for doesn&apos;t exist.</p>
+          <p className="text-gray-600 mb-8">The service you're looking for doesn't exist.</p>
           <Button href="/services">Back to Services</Button>
         </div>
       </div>
@@ -120,7 +120,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                   <Card className="border-2 border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Client-Centric Approach</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Your success is our priority. We work closely with you throughout the project, maintaining transparent communication and incorporating your feedback at every stage. We&apos;re committed to understanding your business and delivering solutions that truly meet your needs.
+                      Your success is our priority. We work closely with you throughout the project, maintaining transparent communication and incorporating your feedback at every stage. We're committed to understanding your business and delivering solutions that truly meet your needs.
                     </p>
                   </Card>
                   <Card className="border-2 border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300">
@@ -194,7 +194,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Get Started</h3>
                 <p className="text-gray-600 mb-6">
                   Ready to transform your business with our {service.title.toLowerCase()} services? 
-                  Let&apos;s discuss your project requirements.
+                  Let's discuss your project requirements.
                 </p>
                 <div className="space-y-4">
                   <Button href="/contact" variant="primary" className="w-full">

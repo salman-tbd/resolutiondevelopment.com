@@ -55,7 +55,7 @@ export default function NotFound() {
 
         {/* Descriptive Text */}
         <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-          Oops! The page you&apos;re looking for seems to have wandered off. Don&apos;t worry though, we&apos;ll help you find your way back.
+          Oops! The page you're looking for seems to have wandered off. Don't worry though, we'll help you find your way back.
         </p>
 
         {/* Error Code Label */}

@@ -97,7 +97,7 @@ export default function IndustriesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold sm:text-5xl mb-4">Industries We Serve</h1>
           <p className="text-xl text-blue-100 max-w-3xl">
-            We deliver specialized IT solutions across diverse industries, understanding each sector&apos;s unique requirements.
+            We deliver specialized IT solutions across diverse industries, understanding each sector's unique requirements.
           </p>
         </div>
       </section>
@@ -147,7 +147,7 @@ export default function IndustriesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Your Industry Not Listed?</h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            We have experience working across many industries. Even if your industry isn&apos;t listed above, 
+            We have experience working across many industries. Even if your industry isn't listed above, 
             we can adapt our solutions to meet your specific needs.
           </p>
           <Button href="/contact" size="lg">

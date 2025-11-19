@@ -73,7 +73,7 @@ export default function ContactForm() {
         </div>
         <h3 className="mt-4 text-lg font-medium text-gray-900">Thank you for contacting us!</h3>
         <p className="mt-2 text-sm text-gray-600">
-          We&apos;ve received your message and will get back to you within 24 hours.
+          We've received your message and will get back to you within 24 hours.
         </p>
       </div>
     );
@@ -196,7 +196,7 @@ export default function ContactForm() {
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </Button>
         <p className="mt-2 text-sm text-gray-500">
-          We&apos;ll respond to <strong>{COMPANY.primaryContact}</strong> or your provided email.
+          We'll respond to <strong>{COMPANY.primaryContact}</strong> or your provided email.
         </p>
       </div>
     </form>

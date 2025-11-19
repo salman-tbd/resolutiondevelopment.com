@@ -86,7 +86,7 @@ export default function PortfolioPage() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold sm:text-6xl lg:text-7xl mb-6 drop-shadow-lg">Our Portfolio</h1>
             <p className="text-xl sm:text-2xl text-blue-50 leading-relaxed drop-shadow-md">
-              Explore our successful projects and see how we&apos;ve helped businesses transform through technology.
+              Explore our successful projects and see how we've helped businesses transform through technology.
             </p>
           </div>
         </div>
@@ -138,7 +138,7 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-6">Ready to Start Your Project?</h2>
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Let&apos;s discuss how we can bring your vision to life with innovative technology solutions.
+            Let's discuss how we can bring your vision to life with innovative technology solutions.
           </p>
           <Button href="/contact" size="lg">
             Get Started
