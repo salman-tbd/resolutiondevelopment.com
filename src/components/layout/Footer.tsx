@@ -51,9 +51,9 @@ export default function Footer() {
             </div>
 
             {/* Social Media */}
-            <div className="hidden flex items-center space-x-3">
+            <div className="flex items-center space-x-3">
               <a 
-                href={COMPANY.socialMedia?.facebook || `https://www.facebook.com/${COMPANY.brandName.replace(/\s+/g, '')}`} 
+                href="https://www.facebook.com/profile.php?id=61584611940355"
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Follow us on Facebook"
@@ -62,7 +62,7 @@ export default function Footer() {
                 <FaFacebook className="text-white" size={18} />
               </a>
               <a 
-                href={COMPANY.socialMedia?.twitter || `https://twitter.com/${COMPANY.brandName.replace(/\s+/g, '')}`} 
+                href="https://x.com/resolution69471" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Follow us on Twitter"
@@ -71,7 +71,7 @@ export default function Footer() {
                 <FaTwitter className="text-white" size={18} />
               </a>
               <a 
-                href={COMPANY.socialMedia?.instagram || `https://www.instagram.com/${COMPANY.brandName.toLowerCase().replace(/\s+/g, '')}`} 
+                href="https://www.instagram.com/resolutiondevelopment6/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Follow us on Instagram"
