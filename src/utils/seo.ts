@@ -160,7 +160,7 @@ export function generateMetadata({
           type: image?.endsWith('.jpg') || image?.endsWith('.jpeg') ? 'image/jpeg' : image?.endsWith('.webp') ? 'image/webp' : 'image/png',
         },
       ],
-      countryName: COMPANY.targetCountries[0] || 'US',
+      countryName: 'India',
     },
     twitter: {
       card: 'summary_large_image',
@@ -192,14 +192,10 @@ export function generateMetadata({
       // Get these from:
       // - Google Search Console: https://search.google.com/search-console
       // - Bing Webmaster Tools: https://www.bing.com/webmasters
-      // - Yandex Webmaster: https://webmaster.yandex.com
-      // - Facebook Business: https://business.facebook.com
       // 
       // Set these in your .env.local file:
       // NEXT_PUBLIC_GOOGLE_VERIFICATION=abc123xyz789
       // NEXT_PUBLIC_BING_VERIFICATION=DEF456UVW012
-      // NEXT_PUBLIC_YANDEX_VERIFICATION=ghi789rst345
-      // NEXT_PUBLIC_FACEBOOK_VERIFICATION=pqr345stu901
       ...(process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION && {
         google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
       }),
@@ -224,10 +220,10 @@ export function generateMetadata({
       }),
     },
     other: {
-      'geo.region': COMPANY.targetCountries[0] || 'US',
-      'geo.placename': 'United States',
-      'geo.position': '39.8283;-98.5795', // Approximate US center
-      'ICBM': '39.8283, -98.5795',
+      'geo.region': 'IN',
+      'geo.placename': 'India',
+      'geo.position': '20.5937;78.9629', // Approximate India center
+      'ICBM': '20.5937, 78.9629',
       'rating': '4.9',
       'rating:scale': '5',
       'rating:value': '4.9',
@@ -236,8 +232,8 @@ export function generateMetadata({
       'revisit-after': '7 days',
       'distribution': 'global',
       'language': 'en-US',
-      'content-language': 'en-US',
-      'timezone': 'America/New_York',
+      'content-language': 'en-IN',
+      'timezone': 'Asia/Kolkata',
       'generator': 'Next.js',
       'mobile-web-app-capable': 'yes',
       'apple-mobile-web-app-capable': 'yes',
@@ -296,7 +292,7 @@ export function generateStructuredData(type: 'Organization' | 'WebSite' | 'Bread
       foundingDate: COMPANY.establishedYear,
       foundingLocation: {
         '@type': 'Place',
-        addressCountry: 'US',
+        addressCountry: 'IN',
       },
       contactPoint: [
         {
@@ -330,16 +326,16 @@ export function generateStructuredData(type: 'Organization' | 'WebSite' | 'Bread
         ...(COMPANY as ExtendedCompany).address,
       }) : {
         '@type': 'PostalAddress',
-        addressCountry: COMPANY.targetCountries[0] || 'US',
-        addressLocality: 'United States',
+        addressCountry: 'IN',
+        addressLocality: 'India',
       },
       geo: (COMPANY as ExtendedCompany).geo ? (typeof (COMPANY as ExtendedCompany).geo === 'object' && (COMPANY as ExtendedCompany).geo?.['@type'] ? (COMPANY as ExtendedCompany).geo : {
         '@type': 'GeoCoordinates',
         ...(COMPANY as ExtendedCompany).geo,
       }) : {
         '@type': 'GeoCoordinates',
-        latitude: '39.8283',
-        longitude: '-98.5795',
+        latitude: '20.5937',
+        longitude: '78.9629',
       },
       aggregateRating: {
         '@type': 'AggregateRating',
@@ -394,14 +390,14 @@ export function generateStructuredData(type: 'Organization' | 'WebSite' | 'Bread
   if (type === 'LocalBusiness') {
     const address = (COMPANY as ExtendedCompany).address || {
       '@type': 'PostalAddress',
-      addressCountry: COMPANY.targetCountries[0] || 'US',
-      addressLocality: 'United States',
+      addressCountry: 'IN',
+      addressLocality: 'India',
     };
 
     const geo = (COMPANY as ExtendedCompany).geo || {
       '@type': 'GeoCoordinates',
-      latitude: '39.8283',
-      longitude: '-98.5795',
+      latitude: '20.5937',
+      longitude: '78.9629',
     };
 
     return {
@@ -427,7 +423,7 @@ export function generateStructuredData(type: 'Organization' | 'WebSite' | 'Bread
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
         opens: '09:00',
         closes: '18:00',
-        timeZone: 'America/New_York',
+        timeZone: 'Asia/Kolkata',
       },
       image: {
         '@type': 'ImageObject',

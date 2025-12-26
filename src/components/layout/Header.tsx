@@ -76,8 +76,8 @@ export default function Header() {
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
                   >
-                    <Link
-                      href={item.href}
+                    <button
+                      onClick={() => setIsServicesOpen(!isServicesOpen)}
                       className={`flex items-center gap-1 text-sm font-bold text-gray-700 hover:text-blue-600 transition-colors ${
                         isActive ? 'border-b-2 border-blue-600 pb-1' : ''
                       }`}
@@ -86,9 +86,10 @@ export default function Header() {
                       <svg className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
-                    </Link>
+                    </button>
                     {isServicesOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-200 max-h-96 overflow-y-auto">
+                      <div className="absolute top-full left-0 pt-2 w-64 z-50">
+                        <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-200 max-h-96 overflow-y-auto">
                         <Link
                           href="/services"
                           className="block px-4 py-2.5 text-sm font-medium text-blue-600 hover:bg-blue-50 transition-colors border-b border-gray-100"
@@ -106,6 +107,7 @@ export default function Header() {
                             {service.title}
                           </Link>
                         ))}
+                        </div>
                       </div>
                     )}
                   </div>
@@ -120,8 +122,8 @@ export default function Header() {
                     onMouseEnter={() => setIsSolutionsOpen(true)}
                     onMouseLeave={() => setIsSolutionsOpen(false)}
                   >
-                    <Link
-                      href={item.href}
+                    <button
+                      onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
                       className={`flex items-center gap-1 text-sm font-bold text-gray-700 hover:text-blue-600 transition-colors ${
                         isActive ? 'border-b-2 border-blue-600 pb-1' : ''
                       }`}
@@ -130,9 +132,10 @@ export default function Header() {
                       <svg className={`w-4 h-4 transition-transform ${isSolutionsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
-                    </Link>
+                    </button>
                     {isSolutionsOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-200">
+                      <div className="absolute top-full left-0 pt-2 w-56 z-50">
+                        <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-200">
                         {solutionsList.map((solution) => (
                           <Link
                             key={solution.href}
@@ -143,6 +146,7 @@ export default function Header() {
                             {solution.title}
                           </Link>
                         ))}
+                        </div>
                       </div>
                     )}
                   </div>
@@ -157,8 +161,8 @@ export default function Header() {
                     onMouseEnter={() => setIsResourcesOpen(true)}
                     onMouseLeave={() => setIsResourcesOpen(false)}
                   >
-                    <Link
-                      href={item.href}
+                    <button
+                      onClick={() => setIsResourcesOpen(!isResourcesOpen)}
                       className={`flex items-center gap-1 text-sm font-bold text-gray-700 hover:text-blue-600 transition-colors ${
                         isActive ? 'border-b-2 border-blue-600 pb-1' : ''
                       }`}
@@ -167,9 +171,10 @@ export default function Header() {
                       <svg className={`w-4 h-4 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
-                    </Link>
+                    </button>
                     {isResourcesOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-200">
+                      <div className="absolute top-full left-0 pt-2 w-56 z-50">
+                        <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-200">
                         {resourcesList.map((resource) => (
                           <Link
                             key={resource.href}
@@ -180,6 +185,7 @@ export default function Header() {
                             {resource.title}
                           </Link>
                         ))}
+                        </div>
                       </div>
                     )}
                   </div>

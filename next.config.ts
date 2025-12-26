@@ -19,60 +19,36 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384], // Icon/thumbnail sizes
     minimumCacheTTL: 60, // Cache time-to-live in seconds
   },
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()'
-          },
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains; preload'
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block'
-          },
-          {
-            key: 'Content-Language',
-            value: 'en-US'
-          },
-          {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'self'; base-uri 'self'; form-action 'self';"
-          },
-        ],
-      },
-      {
-        source: '/assets/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
-          },
-        ],
-      },
-    ];
-  },
+  // NOTE: headers() is NOT supported with static export ('output: export')
+  // Security headers must be configured at the hosting provider level:
+  // 
+  // For cPanel/Apache - Add to .htaccess:
+  // <IfModule mod_headers.c>
+  //   Header set X-DNS-Prefetch-Control "on"
+  //   Header set X-Frame-Options "SAMEORIGIN"
+  //   Header set X-Content-Type-Options "nosniff"
+  //   Header set Referrer-Policy "origin-when-cross-origin"
+  //   Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  //   Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  //   Header set X-XSS-Protection "1; mode=block"
+  //   Header set Content-Language "en-US"
+  //   Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'self'; base-uri 'self'; form-action 'self';"
+  // </IfModule>
+  // <FilesMatch "\.(jpg|jpeg|png|gif|webp|avif|svg|ico|woff|woff2)$">
+  //   Header set Cache-Control "public, max-age=31536000, immutable"
+  // </FilesMatch>
+  //
+  // For Netlify - Add to netlify.toml:
+  // [[headers]]
+  //   for = "/*"
+  //   [headers.values]
+  //     X-DNS-Prefetch-Control = "on"
+  //     X-Frame-Options = "SAMEORIGIN"
+  //     X-Content-Type-Options = "nosniff"
+  //     ... (other headers)
+  //
+  // For Cloudflare - Configure Headers in Transform Rules
+  // For Vercel - They can be configured in vercel.json (if not using serverless)
 };
 
 export default nextConfig;

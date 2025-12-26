@@ -38,7 +38,7 @@ const projects = [
   {
     title: 'Financial Trading Platform',
     industry: 'Finance',
-    description: 'Created a real-time trading platform with advanced charting, risk management, and compliance features.',
+    description: 'Created a real-time trading platform with advanced charting and risk management features.',
     technologies: ['Vue.js', 'Java', 'Redis', 'Kubernetes'],
     icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
     gradient: 'from-green-500 via-emerald-600 to-teal-500',

@@ -29,7 +29,7 @@ export const faqs = [
   },
   {
     question: 'What are your pricing models?',
-    answer: 'We offer flexible pricing models including fixed-price projects, time and materials, and dedicated team models. Pricing depends on project scope, complexity, and requirements. Contact us for a detailed quote tailored to your needs.',
+    answer: 'We offer custom pricing based on project scope, complexity, and requirements. Contact us for a detailed quote tailored to your specific needs and budget.',
   },
   {
     question: 'Do you sign NDAs?',
@@ -37,7 +37,7 @@ export const faqs = [
   },
   {
     question: 'How can I get started?',
-    answer: 'Getting started is easy! Simply contact us through our contact form or email us directly. We\'ll schedule a consultation to discuss your project, understand your requirements, and provide a detailed proposal with timeline and pricing.',
+    answer: 'Getting started is easy! Simply contact us through our contact form or email us directly. We\'ll schedule a consultation to discuss your project, understand your requirements, and provide a detailed proposal.',
   },
 ];
 

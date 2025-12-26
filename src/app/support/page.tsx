@@ -25,7 +25,7 @@ export const metadata = generateMetadata({
 const supportOptions = [
   {
     title: 'Documentation',
-    description: 'Comprehensive guides, API documentation, and tutorials to help you get the most out of your solutions.',
+    description: 'Comprehensive guides and tutorials to help you get the most out of your solutions.',
     icon: FaBook,
     link: '/contact',
     gradient: 'from-blue-500 via-blue-600 to-cyan-500',

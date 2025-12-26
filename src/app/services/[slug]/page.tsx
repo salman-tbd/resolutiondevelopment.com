@@ -46,7 +46,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     areaServed: COMPANY.targetCountries,
     offers: {
       availability: 'https://schema.org/InStock',
-      priceCurrency: 'USD',
+      priceCurrency: 'INR',
     },
   });
 

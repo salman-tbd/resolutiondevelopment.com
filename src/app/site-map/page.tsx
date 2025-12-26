@@ -32,9 +32,7 @@ const sitemapStructure = [
     category: 'Company',
     pages: [
       { name: 'Portfolio', path: ROUTES.portfolio },
-      { name: 'Our Team', path: ROUTES.team },
       { name: 'Careers', path: ROUTES.careers },
-      { name: 'Partners', path: ROUTES.partners },
     ],
   },
   {

@@ -117,13 +117,13 @@ export const serviceDetails: Service[] = [
   {
     title: 'Cybersecurity Services',
     slug: 'cybersecurity-services',
-    description: 'Comprehensive security solutions to protect your digital assets and ensure compliance. We safeguard your business from threats and vulnerabilities.',
-    longDescription: 'Cybersecurity isn\'t optional - it\'s essential for protecting your business, customers, and reputation. Our security experts conduct thorough assessments of your current security posture, identifying vulnerabilities in your applications, networks, and infrastructure. We perform penetration testing to simulate real-world attacks and discover weaknesses before malicious actors do. We design and implement security architectures that follow defense-in-depth principles, with multiple layers of protection. Our team helps you achieve and maintain compliance with regulations like GDPR, HIPAA, PCI-DSS, and SOC 2. We implement security monitoring and incident response procedures so you can detect and respond to threats quickly. We also provide security training for your team, because technology alone isn\'t enough - your people need to understand security best practices. Regular security audits and updates ensure your defenses stay strong as threats evolve.',
+    description: 'Comprehensive security solutions to protect your digital assets. We safeguard your business from threats and vulnerabilities.',
+    longDescription: 'Cybersecurity isn\'t optional - it\'s essential for protecting your business, customers, and reputation. Our security experts conduct thorough assessments of your current security posture, identifying vulnerabilities in your applications, networks, and infrastructure. We perform penetration testing to simulate real-world attacks and discover weaknesses before malicious actors do. We design and implement security architectures that follow defense-in-depth principles, with multiple layers of protection. We implement security monitoring and incident response procedures so you can detect and respond to threats quickly. We also provide security training for your team, because technology alone isn\'t enough - your people need to understand security best practices. Regular security audits and updates ensure your defenses stay strong as threats evolve.',
     features: [
       'Security assessment and auditing',
       'Penetration testing',
       'Security architecture design',
-      'Compliance and governance',
+      'Security governance',
       'Incident response planning',
     ],
     icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',

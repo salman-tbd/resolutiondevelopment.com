@@ -34,14 +34,14 @@ export const metadata = generateMetadata({
 const industries = [
   {
     name: 'Healthcare',
-    description: 'HIPAA-compliant solutions for patient management, electronic health records, and telemedicine platforms.',
+    description: 'Secure solutions for patient management, electronic health records, and telemedicine platforms.',
     solutions: ['EHR Systems', 'Telemedicine', 'Patient Portals', 'Medical Billing'],
     icon: FaHospital,
     gradient: 'from-red-500 via-pink-600 to-rose-500',
   },
   {
     name: 'Finance & Banking',
-    description: 'Secure financial applications, trading platforms, and banking solutions with regulatory compliance.',
+    description: 'Secure financial applications, trading platforms, and banking solutions.',
     solutions: ['Banking Apps', 'Trading Platforms', 'Payment Systems', 'Risk Management'],
     icon: FaCreditCard,
     gradient: 'from-yellow-500 via-amber-600 to-orange-500',
@@ -84,7 +84,7 @@ const industries = [
   {
     name: 'Government',
     description: 'Secure government applications, citizen portals, and public service platforms.',
-    solutions: ['Citizen Portals', 'Document Management', 'Public Services', 'Compliance Systems'],
+    solutions: ['Citizen Portals', 'Document Management', 'Public Services', 'Management Systems'],
     icon: FaLandmark,
     gradient: 'from-gray-600 via-slate-700 to-gray-800',
   },

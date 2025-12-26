@@ -5,7 +5,7 @@ import { faqs } from '@/data/faqs';
 
 export const metadata = generateMetadata({
   title: 'Frequently Asked Questions',
-  description: `Find answers to common questions about ${COMPANY.brandName}'s IT services, development process, pricing, and more. Get expert answers about custom software development, web applications, and cloud solutions.`,
+  description: `Find answers to common questions about ${COMPANY.brandName}'s IT services, development process, and more. Get expert answers about custom software development, web applications, and cloud solutions.`,
   path: '/faq',
 });
 

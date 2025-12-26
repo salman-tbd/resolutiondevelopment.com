@@ -16,6 +16,7 @@ const blogPosts = [
     slug: 'the-future-of-cloud-computing-in-2025',
     excerpt: 'Exploring emerging trends and technologies shaping the cloud computing landscape.',
     category: 'Technology',
+    author: 'Rajesh Sharma, Cloud Architect',
     image: '/assets/images/growtika-Am6pBe2FpJw-unsplash (1).jpg',
   },
   {
@@ -23,6 +24,7 @@ const blogPosts = [
     slug: 'best-practices-for-react-performance-optimization',
     excerpt: 'Learn how to optimize your React applications for better performance and user experience.',
     category: 'Development',
+    author: 'Priya Kumar, Frontend Developer',
     image: '/assets/images/atomic-molecule-life-science-study-experiment-graphic (2).jpg',
   },
   {
@@ -30,6 +32,7 @@ const blogPosts = [
     slug: 'mobile-first-design-why-it-matters',
     excerpt: 'Understanding the importance of mobile-first design in today\'s digital landscape.',
     category: 'Design',
+    author: 'Anjali Reddy, UX Designer',
     image: '/assets/images/lifestyle-designer-using-3d-printer (1).jpg',
   },
   {
@@ -37,6 +40,7 @@ const blogPosts = [
     slug: 'devops-best-practices-for-modern-teams',
     excerpt: 'Essential DevOps practices that can help your team deliver faster and more reliably.',
     category: 'DevOps',
+    author: 'Vikram Singh, DevOps Engineer',
     image: '/assets/images/growtika-f7uCQxhucw4-unsplash.jpg',
   },
   {
@@ -44,6 +48,7 @@ const blogPosts = [
     slug: 'security-best-practices-for-web-applications',
     excerpt: 'Critical security measures every developer should implement in their web applications.',
     category: 'Security',
+    author: 'Amit Patel, Security Specialist',
     image: '/assets/images/dan-lefebvre-7I96SlGpauY-unsplash (1).jpg',
   },
   {
@@ -51,6 +56,7 @@ const blogPosts = [
     slug: 'introduction-to-microservices-architecture',
     excerpt: 'A comprehensive guide to understanding and implementing microservices architecture.',
     category: 'Architecture',
+    author: 'Rahul Desai, Software Architect',
     image: '/assets/images/vishnu-mohanan-2YfhLptMxsg-unsplash (1).jpg',
   },
   {
@@ -58,6 +64,7 @@ const blogPosts = [
     slug: 'api-design-principles-for-modern-applications',
     excerpt: 'Learn the fundamental principles of designing robust and scalable APIs for modern applications.',
     category: 'Development',
+    author: 'Sneha Iyer, Software Developer',
     image: '/assets/images/programming-background-with-html2.jpg',
   },
   {
@@ -65,6 +72,7 @@ const blogPosts = [
     slug: 'database-optimization-strategies',
     excerpt: 'Essential techniques for optimizing database performance and improving query efficiency.',
     category: 'Technology',
+    author: 'Arjun Malhotra, Database Engineer',
     image: '/assets/images/steve-johnson-luT1PtFOWZU-unsplash (1).jpg',
   },
   {
@@ -72,6 +80,7 @@ const blogPosts = [
     slug: 'building-scalable-web-applications',
     excerpt: 'Key strategies and patterns for building web applications that can scale with your business.',
     category: 'Architecture',
+    author: 'Kavita Mehta, Software Engineer',
     image: '/assets/images/person-working-relation-innovation (1).jpg',
   },
 ];
@@ -120,7 +129,10 @@ export default function BlogPage() {
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{post.title}</h3>
-                  <p className="text-gray-600 mb-4 flex-1">{post.excerpt}</p>
+                  <p className="text-gray-600 mb-3 flex-1">{post.excerpt}</p>
+                  <p className="text-sm text-gray-500 mb-4">
+                    <span className="font-medium">By {post.author}</span>
+                  </p>
                   <Button href={`/blog/${post.slug}`} variant="outline" size="sm" className="mt-auto">
                     Read More
                   </Button>
@@ -144,7 +156,7 @@ export default function BlogPage() {
               placeholder="Enter your email"
               className="flex-1 rounded-md border border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
-            <Button size="lg" href="/login">Subscribe</Button>
+            <Button size="lg" href="/contact">Subscribe</Button>
           </div>
         </div>
       </section>

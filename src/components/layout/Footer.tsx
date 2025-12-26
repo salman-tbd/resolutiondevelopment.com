@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { COMPANY, FOOTER_LINKS, NAVIGATION } from '@/utils/constants';
-import { FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaFacebook, FaInstagram, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -60,15 +60,6 @@ export default function Footer() {
                 className="w-10 h-10 rounded-full bg-[#252833] flex items-center justify-center hover:bg-[#2d3142] transition-colors"
               >
                 <FaFacebook className="text-white" size={18} />
-              </a>
-              <a 
-                href="https://x.com/resolution69471" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="Follow us on Twitter"
-                className="w-10 h-10 rounded-full bg-[#252833] flex items-center justify-center hover:bg-[#2d3142] transition-colors"
-              >
-                <FaTwitter className="text-white" size={18} />
               </a>
               <a 
                 href="https://www.instagram.com/resolutiondevelopment6/" 
@@ -151,7 +142,7 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-400" suppressHydrationWarning>
               © {startYear}-{currentYear} {COMPANY.brandName}. All rights reserved. Established {COMPANY.establishedYear} • Empowering businesses through innovative digital solutions
             </p>
           </div>

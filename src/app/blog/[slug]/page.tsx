@@ -10,6 +10,7 @@ const blogPosts = [
     slug: 'the-future-of-cloud-computing-in-2025',
     excerpt: 'Exploring emerging trends and technologies shaping the cloud computing landscape.',
     category: 'Technology',
+    author: 'Rajesh Sharma, Senior Cloud Architect',
     image: '/assets/images/growtika-Am6pBe2FpJw-unsplash (1).jpg',
     content: `
       <p>Cloud computing has evolved dramatically over the past decade, and as we look toward 2025, the landscape continues to shift in ways that will fundamentally change how businesses operate. What started as a way to reduce infrastructure costs has become the backbone of modern digital transformation.</p>
@@ -32,6 +33,7 @@ const blogPosts = [
     slug: 'best-practices-for-react-performance-optimization',
     excerpt: 'Learn how to optimize your React applications for better performance and user experience.',
     category: 'Development',
+    author: 'Priya Kumar, Lead Frontend Developer',
     image: '/assets/images/atomic-molecule-life-science-study-experiment-graphic (2).jpg',
     content: `
       <p>Building fast React applications requires understanding how React works under the hood and applying optimization techniques strategically. Performance issues often creep in as applications grow, but with the right approach, you can keep your app responsive even as complexity increases.</p>
@@ -56,6 +58,7 @@ const blogPosts = [
     slug: 'mobile-first-design-why-it-matters',
     excerpt: 'Understanding the importance of mobile-first design in today\'s digital landscape.',
     category: 'Design',
+    author: 'Anjali Reddy, Senior UX Designer',
     image: '/assets/images/lifestyle-designer-using-3d-printer (1).jpg',
     content: `
       <p>Mobile-first design isn't just a trend - it's become a fundamental approach to building digital products. With mobile devices accounting for over half of all web traffic globally, designing for mobile first ensures your product works well for the majority of your users.</p>
@@ -78,6 +81,7 @@ const blogPosts = [
     slug: 'devops-best-practices-for-modern-teams',
     excerpt: 'Essential DevOps practices that can help your team deliver faster and more reliably.',
     category: 'DevOps',
+    author: 'Vikram Singh, DevOps Lead',
     image: '/assets/images/growtika-f7uCQxhucw4-unsplash.jpg',
     content: `
       <p>DevOps has transformed from a buzzword into a fundamental practice for teams that want to deliver software quickly and reliably. The core idea is simple: break down the silos between development and operations, but implementing it effectively requires cultural change and the right tooling.</p>
@@ -102,6 +106,7 @@ const blogPosts = [
     slug: 'security-best-practices-for-web-applications',
     excerpt: 'Critical security measures every developer should implement in their web applications.',
     category: 'Security',
+    author: 'Amit Patel, Security Architect',
     image: '/assets/images/dan-lefebvre-7I96SlGpauY-unsplash (1).jpg',
     content: `
       <p>Web application security is an ongoing concern that requires attention at every stage of development. Attackers are constantly finding new vulnerabilities, so staying informed and implementing security best practices is essential for protecting user data and maintaining trust.</p>
@@ -130,6 +135,7 @@ const blogPosts = [
     slug: 'introduction-to-microservices-architecture',
     excerpt: 'A comprehensive guide to understanding and implementing microservices architecture.',
     category: 'Architecture',
+    author: 'Rahul Desai, Solutions Architect',
     image: '/assets/images/vishnu-mohanan-2YfhLptMxsg-unsplash (1).jpg',
     content: `
       <p>Microservices architecture has gained significant attention as organizations look for ways to build more scalable and maintainable systems. Unlike monolithic applications where everything is tightly coupled, microservices break applications into smaller, independent services that communicate over well-defined APIs.</p>
@@ -160,6 +166,7 @@ const blogPosts = [
     slug: 'api-design-principles-for-modern-applications',
     excerpt: 'Learn the fundamental principles of designing robust and scalable APIs for modern applications.',
     category: 'Development',
+    author: 'Sneha Iyer, Backend Developer',
     image: '/assets/images/programming-background-with-html2.jpg',
     content: `
       <p>Well-designed APIs are the foundation of modern applications. They enable different systems to communicate, allow frontend and backend teams to work independently, and make it possible to build ecosystems around your platform. Good API design requires balancing simplicity, flexibility, and performance.</p>
@@ -190,6 +197,7 @@ const blogPosts = [
     slug: 'database-optimization-strategies',
     excerpt: 'Essential techniques for optimizing database performance and improving query efficiency.',
     category: 'Technology',
+    author: 'Arjun Malhotra, Database Specialist',
     image: '/assets/images/steve-johnson-luT1PtFOWZU-unsplash (1).jpg',
     content: `
       <p>Database performance directly impacts application responsiveness and user experience. Slow queries can make even well-designed applications feel sluggish. Understanding how databases work and applying optimization techniques can dramatically improve performance.</p>
@@ -220,6 +228,7 @@ const blogPosts = [
     slug: 'building-scalable-web-applications',
     excerpt: 'Key strategies and patterns for building web applications that can scale with your business.',
     category: 'Architecture',
+    author: 'Kavita Mehta, Technical Lead',
     image: '/assets/images/person-working-relation-innovation (1).jpg',
     content: `
       <p>Building applications that can scale is one of the most important challenges in software development. What works for a hundred users often breaks with a hundred thousand users. Planning for scale from the beginning, even if you don't need it immediately, makes future growth much easier.</p>
@@ -319,7 +328,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
     modifiedTime: modifiedDate.toISOString(),
     section: post.category,
     tags: [post.category],
-    authorName: COMPANY.brandName,
+    authorName: post.author,
     publisher: COMPANY.brandName,
   });
 
@@ -360,6 +369,9 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg">
                 {post.title}
               </h1>
+              <p className="text-lg text-white/90 mb-2">
+                <span className="font-medium">By {post.author}</span>
+              </p>
             </div>
           </div>
         </div>

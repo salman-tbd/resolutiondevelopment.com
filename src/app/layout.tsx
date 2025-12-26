@@ -43,7 +43,7 @@ export default function RootLayout({
         <meta name="language" content="en-US" />
         <meta name="distribution" content="global" />
         <meta name="rating" content="general" />
-        <meta name="copyright" content={`© ${new Date().getFullYear()} ${COMPANY.brandName}. All rights reserved.`} />
+        <meta name="copyright" content={`© ${new Date().getFullYear()} ${COMPANY.brandName}. All rights reserved.`} suppressHydrationWarning />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -80,7 +80,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`} itemScope itemType="https://schema.org/Organization">
+      <body className={`${inter.variable} font-sans antialiased`} itemScope itemType="https://schema.org/Organization" suppressHydrationWarning>
         <Header />
         <main className="min-h-screen" itemScope itemType="https://schema.org/WebPage">{children}</main>
         <Footer />
